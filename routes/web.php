@@ -38,7 +38,7 @@ $app->get('/dbtest', function () use ($app) {
 });
 
 $app->get('/runmig', function () use ($app) {
-    Artisan::call('migrate', array('--path' => 'app/migrations', '--force' => true));
+    Artisan::call('migrate', array('--force' => true));
     return "done...";
 });
 
