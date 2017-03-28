@@ -41,3 +41,8 @@ $app->get('/runmig', function () use ($app) {
     Artisan::call('migrate', array('--path' => 'app/migrations', '--force' => true));
     return "done...";
 });
+
+$app->get('/runseed', function () use ($app) {
+    Artisan::call('db:seed', array('----class' => 'soggetti_seeder'));
+    return "done...";
+});
