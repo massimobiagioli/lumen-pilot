@@ -10,6 +10,7 @@
 | and give it the Closure to call when that URI is requested.
 |
 */
+use Illuminate\Support\Facades\Artisan;
 
 $app->get('/', function () use ($app) {
     return $app->version();
@@ -43,6 +44,6 @@ $app->get('/runmig', function () use ($app) {
 });
 
 $app->get('/runseed', function () use ($app) {
-    Artisan::call('db:seed', array('----class' => 'soggetti_seeder'));
+    Artisan::call('db:seed', array('--class' => 'soggetti_seeder'));
     return "done...";
 });
