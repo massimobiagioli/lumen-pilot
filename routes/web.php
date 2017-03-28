@@ -14,3 +14,20 @@
 $app->get('/', function () use ($app) {
     return $app->version();
 });
+
+$app->get('/cacheputtest', function () use ($app) {
+    Cache::put("chiave1", "valore1", 1);
+    $v = Cache::get("chiave1");
+    if (!$v) {
+        $v = "scaduta ...";
+    }
+    return $v;
+});
+
+$app->get('/cachegettest', function () use ($app) {
+    $v = Cache::get("chiave1");
+    if (!$v) {
+        $v = "scaduta ...";
+    }
+    return $v;
+});
