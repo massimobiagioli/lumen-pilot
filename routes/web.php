@@ -31,3 +31,13 @@ $app->get('/cachegettest', function () use ($app) {
     }
     return $v;
 });
+
+$app->get('/dbtest', function () use ($app) {
+    $users = DB::select('select * from soggetti');
+    return json_encode($users);
+});
+
+$app->get('/runmig', function () use ($app) {
+    Artisan::call('migrate', array('--path' => 'app/migrations', '--force' => true));
+    return "done...";
+});
