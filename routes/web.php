@@ -39,11 +39,11 @@ $app->get('/dbtest', function () use ($app) {
 });
 
 $app->get('/runmig', function () use ($app) {
-    Artisan::call('migrate', array('--force' => true));
+    Artisan::call('migrate', ['--force' => true]);
     return "done...";
 });
 
 $app->get('/runseed', function () use ($app) {
-    Artisan::call('db:seed', array('--class' => 'soggetti_seeder'));
+    Artisan::call('db:seed', ['--class' => 'soggetti_seeder', '--force' => true]);
     return "done...";
 });
