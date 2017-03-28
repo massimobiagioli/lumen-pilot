@@ -47,3 +47,7 @@ $app->get('/runseed', function () use ($app) {
     Artisan::call('db:seed', ['--class' => 'soggetti_seeder', '--force' => true]);
     return "done...";
 });
+
+$app->get('/viewtest', function () use ($app) {
+    return view('dummy', ['msg' => 'asdf1234']);
+});
