@@ -6,7 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use App\Custom\DummyConnection;
 
 class DummyServiceProvider extends ServiceProvider {
-
+    
     /**
      * Register dummy application services.
      *
@@ -14,8 +14,8 @@ class DummyServiceProvider extends ServiceProvider {
      */
     public function register() {
         $this->app->singleton('dummyconn', function ($app) {
-            return new DummyConnection();
+            return new DummyConnection($app['App\Custom\Device']);
         });
     }
-
+    
 }
