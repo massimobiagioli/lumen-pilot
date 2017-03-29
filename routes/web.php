@@ -51,3 +51,8 @@ $app->get('/runseed', function () use ($app) {
 $app->get('/viewtest', function () use ($app) {
     return view('dummy', ['msg' => 'asdf1234']);
 });
+
+$app->get('/sptest', function () use ($app) {
+    $result = $app['dummyconn']->test(); 
+    return json_encode($result);
+});
