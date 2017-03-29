@@ -85,6 +85,7 @@ $app->singleton(
 // Dummy
 $app->register(App\Providers\DeviceServiceProvider::class);
 $app->register(App\Providers\DummyServiceProvider::class);
+$app->register(App\Providers\CrudServiceProvider::class);
 
 // Redis
 $app->register(Illuminate\Redis\RedisServiceProvider::class);

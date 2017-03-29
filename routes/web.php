@@ -56,3 +56,5 @@ $app->get('/sptest', function () use ($app) {
     $result = $app['dummyconn']->test(); 
     return json_encode($result);
 });
+
+$app->get('/ctrtest', 'DummyController@query');
