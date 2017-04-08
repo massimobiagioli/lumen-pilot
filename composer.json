@@ -9,7 +9,9 @@
         "laravel/lumen-framework": "5.4.*",
         "vlucas/phpdotenv": "~2.2",
         "predis/predis": "^1.1",
-        "illuminate/redis": "^5.4"
+        "illuminate/redis": "^5.4",
+        "twbs/bootstrap": "^3.3",
+        "irazasyed/larasupport": "~1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -30,6 +32,12 @@
     "scripts": {
         "post-root-package-install": [
             "php -r \"copy('.env.example', '.env');\""
+        ],
+        "post-install-cmd": [
+            "php artisan vendor:publish --tag=public --force"
+        ],
+        "post-update-cmd": [
+            "php artisan vendor:publish --tag=public --force"
         ]
     },
     "minimum-stability": "dev",

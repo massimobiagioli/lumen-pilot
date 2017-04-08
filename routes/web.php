@@ -58,3 +58,5 @@ $app->get('/sptest', function () use ($app) {
 });
 
 $app->get('/ctrtest', 'DummyController@query');
+
+$app->get('/admin', 'AdminController@index');

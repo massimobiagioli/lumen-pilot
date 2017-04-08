@@ -90,6 +90,12 @@ $app->register(App\Providers\CrudServiceProvider::class);
 // Redis
 $app->register(Illuminate\Redis\RedisServiceProvider::class);
 
+// Larasupport
+$app->register(Irazasyed\Larasupport\Providers\ArtisanServiceProvider::class);
+
+// Bootstrap
+$app->register(App\Providers\BootstrapServiceProvider::class);
+
 /*
 |--------------------------------------------------------------------------
 | Load The Application Routes
