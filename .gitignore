@@ -3,6 +3,6 @@
 Homestead.json
 Homestead.yaml
 .env
-nbproject/
+/nbproject/
 /public/vendor
-/client-app/node-modules
+/client-app/node_modules

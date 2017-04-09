@@ -96,6 +96,7 @@ $app->register(Irazasyed\Larasupport\Providers\ArtisanServiceProvider::class);
 // Bootstrap
 $app->register(App\Providers\BootstrapServiceProvider::class);
 
+
 /*
 |--------------------------------------------------------------------------
 | Load The Application Routes
