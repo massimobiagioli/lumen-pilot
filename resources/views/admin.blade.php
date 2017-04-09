@@ -19,10 +19,13 @@
   </head>
   <body>
     <h1>Hello, world!</h1>
-
+    <my-dummy></my-dummy>
+    
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{{elixir('js/x-tag-core.min.js')}}"></script>
+    <script src="{{elixir('js/client.min.js')}}"></script>
     <script src="{{elixir('vendor/bootstrap/js/bootstrap.min.js')}}"></script>
   </body>
 </html>

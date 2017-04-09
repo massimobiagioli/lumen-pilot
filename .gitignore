@@ -5,3 +5,4 @@ Homestead.yaml
 .env
 nbproject/
 /public/vendor
+/client-app/node-modules
